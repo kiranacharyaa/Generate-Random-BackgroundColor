@@ -1,0 +1,31 @@
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.text-center{
+    text-align: center;
+}
+.content{
+    text-align: center;
+    display: inline-block;
+    margin:30px auto;
+    padding:30px;
+    border-radius: 3px;
+    background:rgba(255,255,255,0.3);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.16);
+}
+#change-color{
+    text-decoration: underline;
+    font-style: italic;
+    cursor: pointer;
+}
+.btn{
+    padding:15px 35px;
+    font-size:20px;
+    background:#4caf50;
+    color:#fff;
+    outline:none;
+    border-radius: 3px;
+    border:1px solid #449d47;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.16);
+}

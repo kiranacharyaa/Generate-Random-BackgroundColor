@@ -9,7 +9,6 @@ function changeColor(){
     for(i=0;i<6;i++){
         hexcolor+= colors[Math.floor(Math.random() * colors.length)];
     }
-    console.log(hexcolor);
     body.style.backgroundColor = hexcolor;
     changecolor.innerHTML = hexcolor;
 }
