@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Practice</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <div class="text-center">
-        <div class="content">
-            <h1>Background: <span id="change-color">#ffffff</span></h1>
-            <button onClick=changeColor(); class="btn">Click Me</button>
-        </div>
-    </div>
-    
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Random Background Color</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<div class="text-center">
+			<div class="content">
+				<form>
+					<h1>
+						Background Color
+						<input type="text" id="color-input" value="#ffffff" />
+					</h1>
+					<button id="change-color" type="button" class="btn">Change Color</button>
+					<button id="copy-color" type="button" class="btn btn--black">
+						Copy Color
+					</button>
+					<button id="submit-color" type="submit" hidden></button>
+					<h3 class="text-center event-message"></h3>
+				</form>
+			</div>
+		</div>
 
-    <script src="js/script.js"></script>
-</body>
+		<script src="js/script.js"></script>
+	</body>
 </html>
