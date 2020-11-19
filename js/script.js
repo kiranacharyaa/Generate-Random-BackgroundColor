@@ -7,6 +7,7 @@ const form = document.querySelector("form");
 let hexcolor;
 
 const colors = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "a", "b", "c", "d", "e", "f"];
+const validKey = ["#", 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "a", "b", "c", "d", "e", "f"];
 
 function changeColor() {
     hexcolor = "#";
@@ -28,7 +29,6 @@ copyColorBtn.addEventListener("click", copyColor);
 
 form.addEventListener("submit", function(event){
     event.preventDefault();
-    eventMessage.innerHTML = "";
     if(colorInput.value.includes("#")){
         hexcolor = "";
     }else{
@@ -36,7 +36,19 @@ form.addEventListener("submit", function(event){
     }
     hexcolor += colorInput.value;
     body.style.backgroundColor = hexcolor;
-    if(colorInput.value.length >= 9){
+    invalidCode();
+})
+
+function invalidCode(){
+    eventMessage.innerHTML = "";
+    let res = "";
+    if(colorInput.value.length > 9){
+        eventMessage.innerHTML = "Please enter less than 9 characters including #";
+    }
+    for(i=0;i<colorInput.value.length;i++){
+        res += validKey.filter(colors => colors == colorInput.value.substring(i,i+1))
+    }
+    if(res != colorInput.value){
         eventMessage.innerHTML = "Please enter valid code";
     }
-})
+}
